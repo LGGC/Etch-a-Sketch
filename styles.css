@@ -1,0 +1,25 @@
+#container {
+    background-color: black;
+    display: grid;
+    margin: auto;
+    max-width: 600px;
+    min-height: 600px;
+    max-height: 600px;
+}
+
+.block {
+    background-color: white;
+
+
+}
+
+
+div {
+    display: inline-block;
+}
+
+HTML,
+body {
+    display: grid;
+    background-color: black;
+}
