@@ -8,8 +8,16 @@
     <title>Etch-a-Sketch</title>
 </head>
 
-<body>
-    <div id="container"></div>
+<body ondragstart="return false;">
+    <header>Etch-a-Sketch</header>
+    <main>
+        <div id="options">
+            <input id="color-picker" class="option" type="color" value="#000000">
+            <button id="clear" class="option">Clear Grid</button>
+
+        </div>
+        <div id="container"></div>
+    </main>
 </body>
 
 </html>

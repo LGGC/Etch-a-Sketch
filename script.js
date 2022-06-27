@@ -10,6 +10,7 @@ for (let i = 1; i <= gridCount; i++) {
         console.log('added');
         const block = document.createElement('div');
         block.classList.add('block');
+        block.style.backgroundColor = "transparent";
         block.style.width = String(600 / (gridCount)) + "px";
         block.style.height = String(600 / (gridCount)) + "px";
         block.style.gridColumnStart = `${j}`
@@ -24,9 +25,19 @@ for (let i = 1; i <= gridCount; i++) {
 const blocks = document.querySelectorAll(".block");
 blocks.forEach(block => {
     block.addEventListener('mouseover', () => {
+        
         console.log(mouseDown)
         if (mouseDown) {
-            block.style.backgroundColor = "gray"
+            const colorPicker = document.getElementById("color-picker").value;
+            block.style.backgroundColor = colorPicker;
         }
+    });
+});
+
+
+const clear = document.getElementById("clear");
+clear.addEventListener('click', () => {  
+    blocks.forEach(block => {
+       block.style.backgroundColor = "transparent";
     });
 });
